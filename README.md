@@ -1,5 +1,12 @@
 # tbex
-Locally hosted terminal block explorer
+Locally hosted terminal Ethereum block explorer.  All you need is an Ethereum rpc.
+
+Tbex stores no data locally other than your rpc and most recent 10 searches.  Only the rpc knows what data you're querying.  This makes tbex very lightweight and only limited by your rpc speed.
+
+# Disclaimer
+This comes with the caveat that tbex only displays data made available by rpc calls.  This does not include account histories: there is no rpc call to get all transactions related to a given address.  Web based block explorers are able to display account information because they ingest and re-index all chain data, creating a new link address -> transactions.  
+
+For the above reasons, Tbex should be used as a BLOCK and TRANSACTION explorer instead of a "peep on my friends balance" explorer for the above reasons.  
 
 # Testing 
 
