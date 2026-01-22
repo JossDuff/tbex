@@ -1,0 +1,42 @@
+[package]
+name = "tbex"
+version = "0.1.0"
+edition = "2021"
+description = "Terminal Blockchain Explorer for EVM chains"
+license = "MIT"
+authors = ["Joss Duff"]
+
+[lib]
+name = "tbex"
+path = "src/lib.rs"
+
+[[bin]]
+name = "tbex"
+path = "src/main.rs"
+
+[dependencies]
+# TUI
+ratatui = { version = "0.29", features = ["crossterm"] }
+tui-input = "0.11"
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Config persistence
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+dirs = "6"
+
+# Blockchain
+alloy = { version = "1", features = [
+    "providers",
+    "transport-http",
+    "rpc-types",
+    "network",
+    "consensus",
+    "sol-types",
+] }
+
+# Error handling
+anyhow = "1"
+thiserror = "2"
