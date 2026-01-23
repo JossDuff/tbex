@@ -3,14 +3,6 @@ Locally hosted terminal Ethereum block explorer.  All you need is an Ethereum rp
 
 Tbex stores no data locally other than your rpc and most recent 10 searches.  Only the rpc knows what data you're querying.  This makes tbex very lightweight and only limited by your rpc speed.
 
-# Disclaimers
-Tbex only displays data made available by rpc calls.  
-
-This does not include account histories: there is no rpc call to get all transactions related to a given address.  Web based block explorers are able to display account information because they ingest and re-index all chain data, creating a new link address -> transactions.  Tbex does however display balances of some top tokens, if an address has a balance.
-
-For the above reasons, Tbex should be used as a BLOCK and TRANSACTION explorer instead of a "peep on my friends balance" explorer for the above reasons.  
-
-Another restriction of relying purely on rpc calls is that most calldata can't be decoded.  Tbex attempts to decode common transactions and events so you'll see relevant information.
 
 # Screenshots
 
@@ -19,12 +11,28 @@ Another restriction of relying purely on rpc calls is that most calldata can't b
 ![transaction screen](screenshots/transaction.png)
 ![address screen](screenshots/address.png)
 
+# Disclaimers
+Tbex only displays data made available by rpc calls.  
+
+This does not include account histories: there is no rpc call to get all transactions related to a given address.  Web based block explorers are able to display account information because they ingest and re-index all chain data, creating a new link address -> transactions.  Tbex does however display balances of some top tokens, if an address has a balance.
+
+For the above reasons, Tbex should be used as a BLOCK and TRANSACTION explorer instead of a "peep on my friends purchase history" explorer for the above reasons.  
+
+Another restriction of relying purely on rpc calls is that most calldata can't be decoded.  Tbex attempts to decode common transactions and events so you'll see relevant information.
+
 # Config location
 The config stores your current rpc and the most recent 10 searches you've made. 
 
-Linux:     ~/.config/tbex/config.toml on Linux
-Mac:       /Users/Alice/Library/Application Support/tbex/config.toml
-Windows:   C:\Users\Alice\AppData\Roaming/tbex/config.toml
+```bash
+# Linux
+~/.config/tbex/config.toml 
+
+# Mac
+/Users/Alice/Library/Application Support/tbex/config.toml
+
+# Windows
+C:\Users\Alice\AppData\Roaming/tbex/config.toml
+```
 
 # Testing 
 
