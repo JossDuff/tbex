@@ -23,16 +23,11 @@ Another restriction of relying purely on rpc calls is that most calldata can't b
 # Config location
 The config stores your current rpc and the most recent 10 searches you've made. 
 
-```
-Linux
-~/.config/tbex/config.toml 
+Linux `~/.config/tbex/config.toml`
 
-Mac
-/Users/Alice/Library/Application Support/tbex/config.toml
+Mac `/Users/Alice/Library/Application Support/tbex/config.toml`
 
-Windows
-C:\Users\Alice\AppData\Roaming/tbex/config.toml
-```
+Windows `C:\Users\Alice\AppData\Roaming/tbex/config.toml`
 
 # Testing 
 
